@@ -1,11 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:postbird/screens/home/guide_page.dart';
+import 'package:postbird/screens/home/home.dart';
+import 'package:postbird/screens/home/recipient_detail.dart';
+import 'package:postbird/screens/home/select_date.dart';
+import 'package:postbird/screens/home/sender-create_order.dart';
+import 'package:postbird/screens/home/sender-recipient_detail.dart';
+import 'package:postbird/screens/home/shipper_detail.dart';
+import 'package:postbird/screens/home/start_shipment.dart';
+import 'package:postbird/screens/inbox/chat.dart';
+import 'package:postbird/screens/register/create_account.dart';
+import 'package:postbird/screens/register/create_account_2.dart';
+import 'package:postbird/screens/register/create_account_3.dart';
+import 'package:postbird/screens/register/sign_up.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,5 +34,8 @@ class MyApp extends StatelessWidget {
         '/recipient_detail': (context) => RecipientDetail(),
         '/sender-create_order': (context) => SenderCreateOrder(),
         '/sender-recipient_order': (context) => SenderRecipientDetail(),
-        
-    );}}
+        '/chat': (context) => Chat(),
+      },
+    );
+  }
+}
