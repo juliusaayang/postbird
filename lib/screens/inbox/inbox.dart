@@ -25,7 +25,7 @@ class _InboxState extends State<Inbox> {
                 children: [
                   Center(
                     child: Text(
-                      'My Activity',
+                      'Inbox',
                       style: GoogleFonts.manrope(
                         fontWeight: FontWeight.w700,
                         fontSize: 18,
@@ -86,9 +86,6 @@ class _InboxState extends State<Inbox> {
                       height: 16,
                     ),
                     GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, '/chat');
-                      },
                       child: Container(
                         width: double.infinity,
                         height: 100,
@@ -389,101 +386,106 @@ class _InboxState extends State<Inbox> {
                     SizedBox(
                       height: 5,
                     ),
-                    Container(
-                      width: double.infinity,
-                      height: 100,
-                      padding: EdgeInsets.only(
-                        right: 20,
-                        left: 20,
-                        top: 10,
-                        bottom: 10,
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.grey[50],
-                      ),
-                      child: Stack(
-                        alignment: AlignmentDirectional.topStart,
-                        children: [
-                          Positioned(
-                            right: 0,
-                            child: Container(
-                              height: 75,
-                              width: 48,
-                              decoration: BoxDecoration(
-                                color: Color(
-                                  0xFFFEBC52,
-                                ),
-                                borderRadius: BorderRadius.circular(5),
-                              ),
-                              child: Center(
-                                child: Icon(
-                                  Icons.delete_outline,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/chat');
+                      },
+                      child: Container(
+                        width: double.infinity,
+                        height: 100,
+                        padding: EdgeInsets.only(
+                          right: 20,
+                          left: 20,
+                          top: 10,
+                          bottom: 10,
+                        ),
+                        decoration: BoxDecoration(
+                          color: Colors.grey[50],
+                        ),
+                        child: Stack(
+                          alignment: AlignmentDirectional.topStart,
+                          children: [
+                            Positioned(
+                              right: 0,
+                              child: Container(
+                                height: 75,
+                                width: 48,
+                                decoration: BoxDecoration(
                                   color: Color(
-                                    0xFFFFFFFF,
+                                    0xFFFEBC52,
+                                  ),
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                child: Center(
+                                  child: Icon(
+                                    Icons.delete_outline,
+                                    color: Color(
+                                      0xFFFFFFFF,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(0),
-                                child: CircleAvatar(
-                                  radius: 15,
-                                  backgroundImage: AssetImage(
-                                    'assets/felix.png',
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(0),
+                                  child: CircleAvatar(
+                                    radius: 15,
+                                    backgroundImage: AssetImage(
+                                      'assets/felix.png',
+                                    ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: 15,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'User',
-                                    style: GoogleFonts.manrope(
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 10,
-                                      color: Color(
-                                        0xFF000000,
+                                SizedBox(
+                                  width: 15,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'User',
+                                      style: GoogleFonts.manrope(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 10,
+                                        color: Color(
+                                          0xFF000000,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    height: 3,
-                                  ),
-                                  Text(
-                                    'Felix Khan',
-                                    style: GoogleFonts.manrope(
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 14,
-                                      color: Color(
-                                        0xFF000000,
+                                    SizedBox(
+                                      height: 3,
+                                    ),
+                                    Text(
+                                      'Felix Khan',
+                                      style: GoogleFonts.manrope(
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 14,
+                                        color: Color(
+                                          0xFF000000,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    'i send you package, hope you like it. \nthank you Kitani.',
-                                    style: GoogleFonts.manrope(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 12,
-                                      color: Color(
-                                        0xFF464646,
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      'i send you package, hope you like it. \nthank you Kitani.',
+                                      style: GoogleFonts.manrope(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 12,
+                                        color: Color(
+                                          0xFF464646,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ],
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],

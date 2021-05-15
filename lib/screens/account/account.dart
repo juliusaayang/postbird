@@ -22,34 +22,34 @@ class _AccountState extends State<Account> {
               padding: const EdgeInsets.only(
                 right: 20,
                 left: 20,
-                top: 20,
+                top: 40,
                 bottom: 15,
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              child: Stack(
                 children: [
-                  Text(
-                    '',
-                  ),
-                  Text(
-                    'Account',
-                    style: GoogleFonts.manrope(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 18,
-                      color: Color(
-                        0xFFFFFFFF,
+                  Center(
+                    child: Text(
+                      'Account',
+                      style: GoogleFonts.manrope(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 18,
+                        color: Color(
+                          0xFFFFFFFF,
+                        ),
                       ),
                     ),
                   ),
-                  TextButton(
-                    onPressed: null,
-                    child: Text(
-                      'Logout',
-                      style: GoogleFonts.manrope(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 14,
-                        color: Color(
-                          0xFFFFFFFF,
+                  Positioned(
+                    right: 20,
+                    child: GestureDetector(
+                      child: Text(
+                        'Logout',
+                        style: GoogleFonts.manrope(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 14,
+                          color: Color(
+                            0xFFFFFFFF,
+                          ),
                         ),
                       ),
                     ),
@@ -127,7 +127,12 @@ class _AccountState extends State<Account> {
                                     ),
                                   ),
                                   TextButton(
-                                    onPressed: null,
+                                    onPressed: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        '/edit_profile',
+                                      );
+                                    },
                                     child: Text(
                                       'Edit Profile',
                                       style: GoogleFonts.manrope(
@@ -304,40 +309,45 @@ class _AccountState extends State<Account> {
                         left: 20,
                         top: 20,
                       ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            child: Row(
-                              children: [
-                                Image(
-                                  height: 25,
-                                  width: 25,
-                                  image: AssetImage(
-                                    'assets/Icon.png',
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 18,
-                                ),
-                                Text(
-                                  'Security',
-                                  style: GoogleFonts.manrope(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 16,
-                                    color: Color(
-                                      0xFF000000,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/change_password');
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              child: Row(
+                                children: [
+                                  Image(
+                                    height: 25,
+                                    width: 25,
+                                    image: AssetImage(
+                                      'assets/Icon.png',
                                     ),
                                   ),
-                                ),
-                              ],
+                                  SizedBox(
+                                    width: 18,
+                                  ),
+                                  Text(
+                                    'Security',
+                                    style: GoogleFonts.manrope(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 16,
+                                      color: Color(
+                                        0xFF000000,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                          Icon(
-                            Icons.arrow_forward_ios,
-                            size: 18,
-                          ),
-                        ],
+                            Icon(
+                              Icons.arrow_forward_ios,
+                              size: 18,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Padding(
@@ -359,40 +369,45 @@ class _AccountState extends State<Account> {
                         left: 20,
                         top: 20,
                       ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            child: Row(
-                              children: [
-                                Image(
-                                  height: 25,
-                                  width: 25,
-                                  image: AssetImage(
-                                    'assets/Icon.png',
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 18,
-                                ),
-                                Text(
-                                  'My Address',
-                                  style: GoogleFonts.manrope(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 16,
-                                    color: Color(
-                                      0xFF000000,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/notification');
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              child: Row(
+                                children: [
+                                  Image(
+                                    height: 25,
+                                    width: 25,
+                                    image: AssetImage(
+                                      'assets/Icon.png',
                                     ),
                                   ),
-                                ),
-                              ],
+                                  SizedBox(
+                                    width: 18,
+                                  ),
+                                  Text(
+                                    'Notification',
+                                    style: GoogleFonts.manrope(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 16,
+                                      color: Color(
+                                        0xFF000000,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                          Icon(
-                            Icons.arrow_forward_ios,
-                            size: 18,
-                          ),
-                        ],
+                            Icon(
+                              Icons.arrow_forward_ios,
+                              size: 18,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Padding(
@@ -414,40 +429,45 @@ class _AccountState extends State<Account> {
                         left: 20,
                         top: 20,
                       ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            child: Row(
-                              children: [
-                                Image(
-                                  height: 25,
-                                  width: 25,
-                                  image: AssetImage(
-                                    'assets/Icon.png',
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 18,
-                                ),
-                                Text(
-                                  'Help & FAQ',
-                                  style: GoogleFonts.manrope(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 16,
-                                    color: Color(
-                                      0xFF000000,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/help');
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              child: Row(
+                                children: [
+                                  Image(
+                                    height: 25,
+                                    width: 25,
+                                    image: AssetImage(
+                                      'assets/Icon.png',
                                     ),
                                   ),
-                                ),
-                              ],
+                                  SizedBox(
+                                    width: 18,
+                                  ),
+                                  Text(
+                                    'Help & FAQ',
+                                    style: GoogleFonts.manrope(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 16,
+                                      color: Color(
+                                        0xFF000000,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                          Icon(
-                            Icons.arrow_forward_ios,
-                            size: 18,
-                          ),
-                        ],
+                            Icon(
+                              Icons.arrow_forward_ios,
+                              size: 18,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Padding(

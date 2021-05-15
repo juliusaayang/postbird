@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:postbird/screens/account/change_password.dart';
+import 'package:postbird/screens/account/edit_profile.dart';
+import 'package:postbird/screens/account/help&FAQ.dart';
+import 'package:postbird/screens/account/notification.dart';
 import 'package:postbird/screens/home/guide_page.dart';
 import 'package:postbird/screens/home/home.dart';
 import 'package:postbird/screens/home/recipient_detail.dart';
@@ -35,6 +39,12 @@ class MyApp extends StatelessWidget {
         '/sender-create_order': (context) => SenderCreateOrder(),
         '/sender-recipient_order': (context) => SenderRecipientDetail(),
         '/chat': (context) => Chat(),
+        '/change_password': (context) => ChangePassword(),
+        '/edit_profile': (context) => EditProfile(),
+        '/FAQ': (context) => FAQ(),
+        '/help': (context) => Help(),
+        '/notification': (context) => Notifications(),
+        '/update': (context) => Update(),
       },
     );
   }
