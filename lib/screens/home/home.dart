@@ -2,7 +2,6 @@ import 'package:postbird/screens/account/account.dart';
 import 'package:postbird/screens/activity/activity.dart';
 import 'package:postbird/screens/home/home_page.dart';
 import 'package:postbird/screens/inbox/inbox.dart';
-import 'package:postbird/screens/inbox/messages.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

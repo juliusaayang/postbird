@@ -44,14 +44,14 @@ class _ChangePasswordState extends State<ChangePassword> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      top: 40,
-                    ),
-                    child: Expanded(
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        top: 40,
+                      ),
                       child: Container(
                         width: double.infinity,
-                        height: height / 1,
+                        height: height / 1.085,
                         decoration: BoxDecoration(
                           color: Color(
                             0xFFFAFAFA,
