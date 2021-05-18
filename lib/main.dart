@@ -3,6 +3,9 @@ import 'package:postbird/screens/account/change_password.dart';
 import 'package:postbird/screens/account/edit_profile.dart';
 import 'package:postbird/screens/account/help&FAQ.dart';
 import 'package:postbird/screens/account/notification.dart';
+import 'package:postbird/screens/account/track_package_1.dart';
+import 'package:postbird/screens/account/track_package_2.dart';
+import 'package:postbird/screens/account/track_package_3.dart';
 import 'package:postbird/screens/home/guide_page.dart';
 import 'package:postbird/screens/home/home.dart';
 import 'package:postbird/screens/home/recipient_detail.dart';
@@ -25,7 +28,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: NavBar(),
+      home:  TrackPackage1(),  //NavBar(),
       routes: {
         '/create_account': (context) => CreateAccount(),
         '/create_account_2': (context) => CreateAccount2(),
@@ -45,6 +48,9 @@ class MyApp extends StatelessWidget {
         '/help': (context) => Help(),
         '/notification': (context) => Notifications(),
         '/update': (context) => Update(),
+        '/track_package_1': (context) => TrackPackage1(),
+        '/track_package_2': (context) => TrackPackage2(),
+        '/track_package_3': (context) => TrackPackage3(),
       },
     );
   }
