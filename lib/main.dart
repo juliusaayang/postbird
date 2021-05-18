@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:  TrackPackage1(),  //NavBar(),
+      home:  NavBar(),
       routes: {
         '/create_account': (context) => CreateAccount(),
         '/create_account_2': (context) => CreateAccount2(),
