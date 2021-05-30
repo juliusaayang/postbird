@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:postbird/driver/login.dart';
+import 'package:postbird/driver/signup.dart';
 import 'package:postbird/screens/account/change_password.dart';
 import 'package:postbird/screens/account/edit_profile.dart';
 import 'package:postbird/screens/account/help&FAQ.dart';
@@ -7,7 +9,6 @@ import 'package:postbird/screens/account/track_package_1.dart';
 import 'package:postbird/screens/account/track_package_2.dart';
 import 'package:postbird/screens/account/track_package_3.dart';
 import 'package:postbird/screens/home/guide_page.dart';
-import 'package:postbird/screens/home/home.dart';
 import 'package:postbird/screens/home/recipient_detail.dart';
 import 'package:postbird/screens/home/select_date.dart';
 import 'package:postbird/screens/home/sender-create_order.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:  NavBar(),
+      home:  Login(),
       routes: {
         '/create_account': (context) => CreateAccount(),
         '/create_account_2': (context) => CreateAccount2(),
