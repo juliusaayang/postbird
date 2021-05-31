@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomeOnline extends StatelessWidget {
+class HomeOnlineSwipeUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +37,8 @@ class HomeOnline extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
+      drawer: DrawerClass(),
+      body: ListView(
         children: [
           Container(
             padding: EdgeInsets.symmetric(
@@ -69,7 +70,7 @@ class HomeOnline extends StatelessWidget {
           ),
           Container(
             width: double.infinity,
-            height: 230,
+            height: 305,
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
@@ -300,6 +301,51 @@ class HomeOnline extends StatelessWidget {
                           ),
                         ),
                       ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(
+                    20,
+                    0,
+                    20,
+                    10,
+                  ),
+                  child: Container(
+                    height: 1,
+                    width: double.infinity,
+                    color: Color(
+                      0xFFEFEFF4,
+                    ),
+                  ),
+                ),
+                Container(
+                  width: double.infinity,
+                  height: 70,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 10,
+                  ),
+                  child: Container(
+                    height: 45,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Color(
+                        0xFFFEBC52,
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Accept',
+                        style: GoogleFonts.manrope(
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold,
+                          color: Color(
+                            0xFF242A37,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -791,6 +837,180 @@ class HomeOnline extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class DrawerClass extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: Container(
+        child: Column(
+          children: [
+            Expanded(
+              child: Container(
+                color: Color(
+                  0xFFFEBC52,
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Container(
+                color: Color(
+                  0xFFFFFFFF,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(30.0),
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 60,
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/home_drawer_icon.png',
+                              height: 35,
+                              width: 35,
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              'Home',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 17,
+                                color: Colors.grey[700],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 60,
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/wallet_drawer_icon.png',
+                              height: 35,
+                              width: 35,
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              'My Wallet',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 17,
+                                color: Colors.grey[700],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 60,
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/history_drawer_icon.png',
+                              height: 35,
+                              width: 35,
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              'History',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 17,
+                                color: Colors.grey[700],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 60,
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/notification_drawer_icon.png',
+                              height: 35,
+                              width: 35,
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              'Notifications',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 17,
+                                color: Colors.grey[700],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 70,
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/invitefriends_drawer_icons.png',
+                              height: 35,
+                              width: 35,
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              'Invite Friends',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 17,
+                                color: Colors.grey[700],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 70,
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/logout_drawer_icon.png',
+                              height: 35,
+                              width: 35,
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              'Logout',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 17,
+                                color: Colors.grey[700],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

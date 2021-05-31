@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:postbird/driver/home_online-swip_up.dart';
 import 'package:postbird/driver/home_online.dart';
 import 'package:postbird/driver/signup.dart';
 
@@ -224,7 +225,7 @@ class Login extends StatelessWidget {
                                   context,
                                   MaterialPageRoute(
                                     builder: (contect) {
-                                      return HomeOnline();
+                                      return HomeOnlineSwipeUp();
                                     },
                                   ),
                                 );
