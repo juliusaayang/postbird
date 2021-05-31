@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class HomeOnline extends StatelessWidget {
   @override
@@ -28,16 +29,22 @@ class HomeOnline extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(
               horizontal: 20,
+              vertical: 5,
             ),
-            child: Image.asset(
-              'assets/switcher_on.png',
-              height: 20,
-              width: 40,
+            child: SwitcherButton(
+              value: true,
+              onColor: Color(
+                0xFFFEBC52,
+              ),
+              offColor: Colors.black12,
+              onChange: (value) {
+                print(value);
+              },
             ),
           ),
         ],
       ),
-      body: Column(
+      body: ListView(
         children: [
           Container(
             padding: EdgeInsets.symmetric(

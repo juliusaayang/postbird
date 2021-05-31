@@ -17,7 +17,7 @@ class Signup extends StatelessWidget {
           child: ListView(
             children: [
               SizedBox(
-                height: 80,
+                height: 10,
               ),
               Container(
                 width: double.infinity,
@@ -31,13 +31,13 @@ class Signup extends StatelessWidget {
                     ),
                   ],
                 ),
-                height: height * 0.7,
+                height: height * 0.8,
                 child: Column(
                   children: [
                     Expanded(
                       child: Container(
                         padding: EdgeInsets.only(
-                          right: 50,
+                          right: 40,
                           left: 30,
                         ),
                         width: double.infinity,
@@ -51,43 +51,50 @@ class Signup extends StatelessWidget {
                           ),
                         ),
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(
                                 top: 20,
                                 bottom: 0,
                               ),
-                              child: Image(
-                                height: 100,
-                                width: 100,
-                                image: AssetImage(
-                                  'assets/Group.png',
+                              child: Center(
+                                child: Image(
+                                  height: 100,
+                                  width: 100,
+                                  image: AssetImage(
+                                    'assets/Group.png',
+                                  ),
                                 ),
                               ),
                             ),
-                            RichText(
-                              text: TextSpan(
-                                text: 'Sign up',
-                                style: GoogleFonts.manrope(
-                                  fontSize: 35,
-                                  color: Color(
-                                    0xFF242A37,
-                                  ),
-                                  fontWeight: FontWeight.w600,
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: ' with email and phone number',
-                                    style: GoogleFonts.manrope(
-                                      fontSize: 35,
-                                      color: Color(
-                                        0xFF242A37,
-                                      ),
-                                      fontWeight: FontWeight.w400,
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                bottom: 20,
+                              ),
+                              child: RichText(
+                                text: TextSpan(
+                                  text: 'Sign up',
+                                  style: GoogleFonts.manrope(
+                                    fontSize: 35,
+                                    color: Color(
+                                      0xFF242A37,
                                     ),
+                                    fontWeight: FontWeight.w600,
                                   ),
-                                ],
+                                  children: [
+                                    TextSpan(
+                                      text: ' with email and phone number',
+                                      style: GoogleFonts.manrope(
+                                        fontSize: 35,
+                                        color: Color(
+                                          0xFF242A37,
+                                        ),
+                                        fontWeight: FontWeight.w400,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ],
@@ -157,49 +164,46 @@ class Signup extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Expanded(
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      border: Border.all(
-                                        color: Color(
-                                          0xFFDEDEDE,
-                                        ),
-                                      ),
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(8),
-                                        bottomLeft: Radius.circular(8),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      color: Color(
+                                        0xFFDEDEDE,
                                       ),
                                     ),
-                                    width: 92,
-                                    height: 62,
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                            left: 5,
-                                          ),
-                                          child: Image(
-                                            width: 42,
-                                            height: 26,
-                                            image: AssetImage(
-                                              'assets/Image2.png',
-                                            ),
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 2,
-                                        ),
-                                        Icon(
-                                          Icons.arrow_drop_down,
-                                        ),
-                                      ],
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(8),
+                                      bottomLeft: Radius.circular(8),
                                     ),
+                                  ),
+                                  width: 96,
+                                  height: 62,
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                          left: 5,
+                                        ),
+                                        child: Image(
+                                          width: 42,
+                                          height: 26,
+                                          image: AssetImage(
+                                            'assets/Image2.png',
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 2,
+                                      ),
+                                      Icon(
+                                        Icons.arrow_drop_down,
+                                      ),
+                                    ],
                                   ),
                                 ),
                                 Expanded(
-                                  flex: 3,
                                   child: Container(
                                     width: 236,
                                     child: TextFormField(
@@ -256,7 +260,7 @@ class Signup extends StatelessWidget {
                               ],
                             ),
                             SizedBox(
-                              height: 40,
+                              height: height * 0.1,
                             ),
                             Container(
                               width: double.infinity,

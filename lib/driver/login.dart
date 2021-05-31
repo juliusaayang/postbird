@@ -107,11 +107,11 @@ class Login extends StatelessWidget {
                         SizedBox(
                           height: 30,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Expanded(
-                              child: Container(
+                        Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Container(
                                 decoration: BoxDecoration(
                                   border: Border.all(
                                     color: Color(
@@ -150,85 +150,85 @@ class Login extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                            ),
-                            Expanded(
-                              flex: 3,
-                              child: Container(
-                                width: 236,
-                                child: TextFormField(
-                                  keyboardType: TextInputType.phone,
-                                  style: GoogleFonts.manrope(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w700,
-                                    color: Color(
-                                      0xFF1B1B1B,
-                                    ),
-                                  ),
-                                  decoration: InputDecoration(
-                                    enabledBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.only(
-                                        topRight: Radius.circular(8),
-                                        bottomRight: Radius.circular(8),
+                              Expanded(
+                                flex: 3,
+                                child: Container(
+                                  width: 236,
+                                  child: TextFormField(
+                                    keyboardType: TextInputType.phone,
+                                    style: GoogleFonts.manrope(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w700,
+                                      color: Color(
+                                        0xFF1B1B1B,
                                       ),
-                                      borderSide: BorderSide(
-                                        color: Color(
-                                          0xFFDEDEDE,
+                                    ),
+                                    decoration: InputDecoration(
+                                      enabledBorder: OutlineInputBorder(
+                                        borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(8),
+                                          bottomRight: Radius.circular(8),
+                                        ),
+                                        borderSide: BorderSide(
+                                          color: Color(
+                                            0xFFDEDEDE,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    prefixText: '+234   ',
-                                    prefixStyle: GoogleFonts.manrope(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w700,
-                                      color: Color(
-                                        0xFF1B1B1B,
-                                      ),
-                                    ),
-                                    suffixIcon: Padding(
-                                      padding: const EdgeInsets.all(15.0),
-                                      child: Image.asset(
-                                        'assets/close.png',
-                                        height: 5,
-                                        width: 5,
-                                      ),
-                                    ),
-                                    labelStyle: GoogleFonts.manrope(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w700,
-                                      color: Color(
-                                        0xFF1B1B1B,
-                                      ),
-                                    ),
-                                    focusedBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.only(
-                                        topRight: Radius.circular(8),
-                                        bottomRight: Radius.circular(8),
-                                      ),
-                                      borderSide: BorderSide(
+                                      prefixText: '+234   ',
+                                      prefixStyle: GoogleFonts.manrope(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w700,
                                         color: Color(
-                                          0xFFFEBC52,
+                                          0xFF1B1B1B,
+                                        ),
+                                      ),
+                                      suffixIcon: Padding(
+                                        padding: const EdgeInsets.all(15.0),
+                                        child: Image.asset(
+                                          'assets/close.png',
+                                          height: 5,
+                                          width: 5,
+                                        ),
+                                      ),
+                                      labelStyle: GoogleFonts.manrope(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w700,
+                                        color: Color(
+                                          0xFF1B1B1B,
+                                        ),
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                        borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(8),
+                                          bottomRight: Radius.circular(8),
+                                        ),
+                                        borderSide: BorderSide(
+                                          color: Color(
+                                            0xFFFEBC52,
+                                          ),
                                         ),
                                       ),
                                     ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                         SizedBox(
                           height: 40,
                         ),
                         GestureDetector(
-                          onTap: (){
+                          onTap: () {
                             Navigator.pushReplacement(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (contect) {
-                                      return HomeOnlineSwipeUp();
-                                    },
-                                  ),
-                                );
+                              context,
+                              MaterialPageRoute(
+                                builder: (contect) {
+                                  return HomeOnline();
+                                },
+                              ),
+                            );
                           },
                           child: Container(
                             width: double.infinity,
