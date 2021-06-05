@@ -1,11 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
+import 'package:postbird/driver/drawer.dart';
 
-class HomeOnline extends StatelessWidget {
+class HomeOnline extends StatefulWidget {
+  @override
+  _HomeOnlineState createState() => _HomeOnlineState();
+}
+
+class _HomeOnlineState extends State<HomeOnline> {
+  bool switchOnAndOff = true;
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
+  void _openDrawer() {
+    _scaffoldKey.currentState.openDrawer();
+  }
+
+  void _closeDrawer() {
+    Navigator.of(context).pop();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       backgroundColor: Color(
         0xFFF7F8FA,
       ),
@@ -25,25 +42,43 @@ class HomeOnline extends StatelessWidget {
         backgroundColor: Color(
           0xFFFFFFFF,
         ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 20,
-              vertical: 5,
+        leading: GestureDetector(
+          onTap: () {
+            _openDrawer();
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Image.asset(
+              'assets/drawer_icon.png',
+              height: 24,
+              width: 24,
             ),
-            child: SwitcherButton(
-              value: true,
-              onColor: Color(
-                0xFFFEBC52,
+          ),
+        ),
+        actions: [
+          GestureDetector(
+            onTap: () {
+              setState(() {
+                switchOnAndOff = !switchOnAndOff;
+              });
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
+                vertical: 15,
               ),
-              offColor: Colors.black12,
-              onChange: (value) {
-                print(value);
-              },
+              child: switchOnAndOff
+                  ? Image.asset(
+                      'assets/switcher_on.png',
+                    )
+                  : Image.asset(
+                      'assets/switcher_off.png',
+                    ),
             ),
           ),
         ],
       ),
+      drawer: DrawerClass(),
       body: ListView(
         children: [
           Container(

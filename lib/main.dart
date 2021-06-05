@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:postbird/driver/history.dart';
+import 'package:postbird/driver/home_online.dart';
+import 'package:postbird/driver/invite_friends.dart';
+import 'package:postbird/driver/invite_friends_list.dart';
 import 'package:postbird/driver/login.dart';
+import 'package:postbird/driver/my_wallet.dart';
 import 'package:postbird/driver/signup.dart';
+import 'package:postbird/driver/vehicle_management.dart';
+import 'package:postbird/driver/vehicle_management_add.dart';
 import 'package:postbird/screens/account/change_password.dart';
 import 'package:postbird/screens/account/edit_profile.dart';
 import 'package:postbird/screens/account/help&FAQ.dart';
@@ -29,7 +36,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:  Login(),
+      home: Login(),
       routes: {
         '/create_account': (context) => CreateAccount(),
         '/create_account_2': (context) => CreateAccount2(),
@@ -52,6 +59,13 @@ class MyApp extends StatelessWidget {
         '/track_package_1': (context) => TrackPackage1(),
         '/track_package_2': (context) => TrackPackage2(),
         '/track_package_3': (context) => TrackPackage3(),
+        '/history': (context) => History(),
+        '/home_online': (context) => HomeOnline(),
+        '/invite_friends': (context) => InviteFriends(),
+        '/invite_friends_list': (context) => InviteFriendsList(),
+        '/vehicle_management': (context) => VehicleManagement(),
+        '/vehicle_management_add': (context) => VehicleManagementAdd(),
+        '/my_wallet': (context) => MyWallet(),
       },
     );
   }
