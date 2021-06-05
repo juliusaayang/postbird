@@ -106,6 +106,7 @@ class _InviteFriendsListState extends State<InviteFriendsList> {
                         border: InputBorder.none,
                         prefixIcon: Icon(
                           Icons.search,
+                          color: Colors.grey[700],
                         ),
                       ),
                     ),
