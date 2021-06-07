@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:postbird/driver/history.dart';
+import 'package:postbird/driver/home_oneline-booking_details-go_to_pickup.dart';
+import 'package:postbird/driver/home_online-boooking_details.dart';
 import 'package:postbird/driver/home_online.dart';
 import 'package:postbird/driver/invite_friends.dart';
 import 'package:postbird/driver/invite_friends_list.dart';
 import 'package:postbird/driver/login.dart';
+import 'package:postbird/driver/message_detail.dart';
 import 'package:postbird/driver/my_wallet.dart';
 import 'package:postbird/driver/signup.dart';
 import 'package:postbird/driver/vehicle_management.dart';
@@ -66,6 +69,9 @@ class MyApp extends StatelessWidget {
         '/vehicle_management': (context) => VehicleManagement(),
         '/vehicle_management_add': (context) => VehicleManagementAdd(),
         '/my_wallet': (context) => MyWallet(),
+        '/home_online-booking_details': (context) => HomeOnlineBookingDetails(),
+        '/message_detail': (context) => MessageDetail(),
+        '/home_onlline-booking_details-go_to_pickup': (context) => HomeOnlineBookingDetailsGoToPickUp(),
       },
     );
   }

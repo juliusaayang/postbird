@@ -320,30 +320,38 @@ class HomeOnlineSwipeUp extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  width: double.infinity,
-                  height: 70,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 10,
-                  ),
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      '/home_online-booking_details',
+                    );
+                  },
                   child: Container(
-                    height: 45,
                     width: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: Color(
-                        0xFFFEBC52,
-                      ),
+                    height: 70,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 10,
                     ),
-                    child: Center(
-                      child: Text(
-                        'Accept',
-                        style: GoogleFonts.manrope(
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
-                          color: Color(
-                            0xFF242A37,
+                    child: Container(
+                      height: 45,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color: Color(
+                          0xFFFEBC52,
+                        ),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Accept',
+                          style: GoogleFonts.manrope(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: Color(
+                              0xFF242A37,
+                            ),
                           ),
                         ),
                       ),

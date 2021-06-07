@@ -224,8 +224,8 @@ class Login extends StatelessWidget {
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                builder: (contect) {
-                                  return HomeOnline();
+                                builder: (context) {
+                                  return HomeOnlineSwipeUp();
                                 },
                               ),
                             );
