@@ -44,14 +44,118 @@ class _HomeOnlineBookingDetailsGoToPickUpState
       ),
       body: Stack(
         children: [
-          Image.asset(
-            'assets/maps.png',
-            fit: BoxFit.fill,
+          Container(
+            padding: EdgeInsets.symmetric(
+              horizontal: 20,
+            ),
+            height: 45,
+            width: width,
+            color: Color(
+              0xFFFEBC52,
+            ),
+            child: Row(
+              children: [
+                Container(
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        'assets/left_arrow.png',
+                        height: 20,
+                        width: 15,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        '250m',
+                        style: GoogleFonts.manrope(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                Text('Turn right at 105 William St, Chicago, US ',
+                    style: GoogleFonts.manrope(
+                      fontSize: 15,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w400,
+                    )),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 45,
+            ),
+            child: Image.asset(
+              'assets/maps.png',
+              fit: BoxFit.cover,
+              width: width,
+            ),
+          ),
+          Positioned(
+            top: height * 0.55,
+            left: width * 0.28,
+            child: Container(
+              height: 200,
+              width: 200,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.orangeAccent,
+              ),
+            ),
+          ),
+          Positioned(
+            top: height * 0.2,
+            left: width * 0.47,
+            child: Image.asset(
+              'assets/navigation.png',
+              height: 400,
+              width: 200,
+            ),
+          ),
+          Positioned(
+            top: height * 0.63,
+            left: width * 0.45,
+            child: Container(
+              height: 60,
+              width: 60,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: Colors.white,
+                  width: 2,
+                ),
+                color: Colors.orangeAccent,
+              ),
+              child: Center(
+                child: Image.asset(
+                  'assets/navigator.png',
+                  width: 35,
+                  height: 40,
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: height * 0.35,
+            right: width * 0.4,
+            child: Image.asset(
+              'assets/left_arrow.png',
+              height: 30,
+              width: 15,
+            ),
           ),
           DraggableScrollableSheet(
             initialChildSize: 0.12,
-            maxChildSize: 0.96,
-            minChildSize: 0.1,
+            maxChildSize: 0.94,
+            minChildSize: 0.12,
             builder: (context, controller) => ClipRRect(
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20),
