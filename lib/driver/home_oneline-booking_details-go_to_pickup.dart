@@ -378,23 +378,28 @@ class _HomeOnlineBookingDetailsGoToPickUpState
                           SizedBox(
                             height: 10,
                           ),
-                          Container(
-                            height: 45,
-                            width: width,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: Color(
-                                0xFFFEBC52,
+                          InkWell(
+                            onTap: (){
+                              Navigator.pushNamed(context, '/history_details',);
+                            },
+                            child: Container(
+                              height: 45,
+                              width: width,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                color: Color(
+                                  0xFFFEBC52,
+                                ),
                               ),
-                            ),
-                            child: Center(
-                              child: Text(
-                                'DROP OFF',
-                                style: GoogleFonts.manrope(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Color(
-                                    0xFF262628,
+                              child: Center(
+                                child: Text(
+                                  'DROP OFF',
+                                  style: GoogleFonts.manrope(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(
+                                      0xFF262628,
+                                    ),
                                   ),
                                 ),
                               ),

@@ -31,6 +31,8 @@ import 'package:postbird/screens/register/create_account_2.dart';
 import 'package:postbird/screens/register/create_account_3.dart';
 import 'package:postbird/screens/register/sign_up.dart';
 
+import 'driver/history_details.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -72,6 +74,7 @@ class MyApp extends StatelessWidget {
         '/home_online-booking_details': (context) => HomeOnlineBookingDetails(),
         '/message_detail': (context) => MessageDetail(),
         '/home_onlline-booking_details-go_to_pickup': (context) => HomeOnlineBookingDetailsGoToPickUp(),
+        '/history_details': (context) => HistoryDetails(),
       },
     );
   }

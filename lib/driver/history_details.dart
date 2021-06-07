@@ -1,58 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomeOnlineBookingDetails extends StatefulWidget {
+class HistoryDetails extends StatefulWidget {
   @override
-  _HomeOnlineBookingDetailsState createState() =>
-      _HomeOnlineBookingDetailsState();
+  _HistoryDetailsState createState() => _HistoryDetailsState();
 }
 
-class _HomeOnlineBookingDetailsState extends State<HomeOnlineBookingDetails> {
+class _HistoryDetailsState extends State<HistoryDetails> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Color(
-        0xFFF7F8FA,
+        0xFFFEBC52,
       ),
-      appBar: AppBar(
-        iconTheme: IconThemeData(
-          color: Color(
-            0xFFFEBC52,
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 50,
           ),
-        ),
-        title: Text(
-          '#123456',
-          style: GoogleFonts.manrope(
-            fontSize: 17,
-            fontWeight: FontWeight.bold,
-            color: Color(
-              0xFF242A37,
-            ),
-          ),
-        ),
-        elevation: 0,
-        centerTitle: true,
-        backgroundColor: Color(
-          0xFFFFFFFF,
-        ),
-      ),
-      body: Column(
-        children: [
-          Container(
-            width: double.infinity,
+          child: Container(
+            width: width,
+            height: height,
             decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black12,
-                  blurRadius: 5,
-                  offset: Offset(5, 0),
-                ),
-              ],
-              color: Color(
-                0xFFFFFFFF,
-              ),
+              borderRadius: BorderRadius.circular(8),
+              color: Colors.white,
             ),
             child: Column(
               children: [
@@ -61,133 +35,151 @@ class _HomeOnlineBookingDetailsState extends State<HomeOnlineBookingDetails> {
                     horizontal: 20,
                   ),
                   width: double.infinity,
-                  height: 70,
-                  color: Color(
-                    0xFFF7F7F7,
+                  height: height * 0.085,
+                  decoration: BoxDecoration(
+                    color: Color(
+                      0xFFF7F7F7,
+                    ),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(8),
+                      topRight: Radius.circular(8),
+                    ),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  child: Column(
                     children: [
-                      Container(
-                        child: Row(
-                          children: [
-                            Container(
-                              height: 45,
-                              width: 45,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              child: Image(
-                                image: AssetImage(
-                                  'assets/esther.png',
-                                ),
-                                width: 45,
-                                height: 45,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 15,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                top: 10,
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Esther Berry',
-                                    style: GoogleFonts.manrope(
-                                      fontSize: 17,
-                                      fontWeight: FontWeight.bold,
-                                      color: Color(
-                                        0xFF242A37,
+                      SizedBox(
+                        height: height * 0.015,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                    top: 10,
+                                  ),
+                                  child: Container(
+                                    height: 45,
+                                    width: 45,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: Image(
+                                      image: AssetImage(
+                                        'assets/esther.png',
                                       ),
+                                      width: 45,
+                                      height: 45,
                                     ),
                                   ),
-                                  SizedBox(
-                                    height: 7,
+                                ),
+                                SizedBox(
+                                  width: 15,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                    top: 10,
                                   ),
-                                  Row(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
-                                      Container(
-                                        height: 16,
-                                        width: 110,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(8),
+                                      Text(
+                                        'Esther Berry',
+                                        style: GoogleFonts.manrope(
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.bold,
                                           color: Color(
-                                            0xFFFEBC52,
-                                          ),
-                                        ),
-                                        child: Center(
-                                          child: Text(
-                                            'Item Size: 3kg - 10kg',
-                                            style: GoogleFonts.manrope(
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.w600,
-                                              color: Color(
-                                                0xFF242A37,
-                                              ),
-                                            ),
+                                            0xFF242A37,
                                           ),
                                         ),
                                       ),
                                       SizedBox(
-                                        width: 10,
+                                        height: 7,
                                       ),
-                                      Image(
-                                        image: AssetImage(
-                                          'assets/cup.png',
-                                        ),
-                                        height: 14,
-                                        width: 14,
+                                      Row(
+                                        children: [
+                                          Container(
+                                            height: 16,
+                                            width: 110,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(8),
+                                              color: Color(
+                                                0xFFFEBC52,
+                                              ),
+                                            ),
+                                            child: Center(
+                                              child: Text(
+                                                'Item Size: 3kg - 10kg',
+                                                style: GoogleFonts.manrope(
+                                                  fontSize: 10,
+                                                  fontWeight: FontWeight.w600,
+                                                  color: Color(
+                                                    0xFF242A37,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                                          Image(
+                                            image: AssetImage(
+                                              'assets/cup.png',
+                                            ),
+                                            height: 14,
+                                            width: 14,
+                                          ),
+                                        ],
                                       ),
                                     ],
                                   ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          top: 10,
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Text(
-                              '₦325.00',
-                              style: GoogleFonts.manrope(
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
-                                color: Color(
-                                  0xFF242A37,
                                 ),
-                              ),
+                              ],
                             ),
-                            SizedBox(
-                              height: 5,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              top: 10,
                             ),
-                            Text(
-                              '2.2 km',
-                              style: GoogleFonts.manrope(
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                color: Color(
-                                  0xFFBEC2CE,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Text(
+                                  '₦325.00',
+                                  style: GoogleFonts.manrope(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(
+                                      0xFF242A37,
+                                    ),
+                                  ),
                                 ),
-                              ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  '2.2 km',
+                                  style: GoogleFonts.manrope(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(
+                                      0xFFBEC2CE,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
                 ),
-                
                 Container(
                   width: double.infinity,
                   height: 70,
@@ -293,7 +285,7 @@ class _HomeOnlineBookingDetailsState extends State<HomeOnlineBookingDetails> {
                 ),
                 Container(
                   width: double.infinity,
-                  height: MediaQuery.of(context).size.height * 0.11,
+                  height: MediaQuery.of(context).size.height * 0.15,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 20,
@@ -459,139 +451,73 @@ class _HomeOnlineBookingDetailsState extends State<HomeOnlineBookingDetails> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 15,
-                    vertical: 20,
+                  padding: const EdgeInsets.fromLTRB(
+                    20,
+                    40,
+                    20,
+                    10,
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 20,
-                        ),
-                        height: height * 0.1,
-                        width: width * 0.25,
-                        decoration: BoxDecoration(
-                          color: Color(
-                            0xFF4CE5B1,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      height: 50,
+                      width: width,
+                      decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'cancel'.toUpperCase(),
+                          style: GoogleFonts.manrope(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
                           ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Image.asset(
-                              'assets/contact.png',
-                              height: 24,
-                              width: 24,
-                            ),
-                            Text(
-                              'Call',
-                              style: GoogleFonts.manrope(
-                                color: Colors.white,
-                                fontSize: 15,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                          ],
                         ),
                       ),
-                      Container(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 20,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(
+                    20,
+                    20,
+                    20,
+                    10,
+                  ),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      height: 50,
+                      width: width,
+                      decoration: BoxDecoration(
+                        color: Color(
+                          0xFFFEBC52,
                         ),
-                        height: height * 0.1,
-                        width: width * 0.25,
-                        decoration: BoxDecoration(
-                          color: Color(
-                            0xFF4252FF,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'drop off'.toUpperCase(),
+                          style: GoogleFonts.manrope(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.black,
                           ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Image.asset(
-                              'assets/message.png',
-                              height: 24,
-                              width: 24,
-                            ),
-                            Text(
-                              'Message',
-                              style: GoogleFonts.manrope(
-                                color: Colors.white,
-                                fontSize: 15,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                          ],
                         ),
                       ),
-                      Container(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 20,
-                        ),
-                        height: height * 0.1,
-                        width: width * 0.25,
-                        decoration: BoxDecoration(
-                          color: Color(
-                            0xFFBEC2CE,
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Image.asset(
-                              'assets/delete.png',
-                              height: 24,
-                              width: 24,
-                            ),
-                            Text(
-                              'Cancel',
-                              style: GoogleFonts.manrope(
-                                color: Colors.white,
-                                fontSize: 15,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
               ],
             ),
           ),
-          Spacer(),
-          InkWell(
-            onTap: () {
-              Navigator.pushNamed(
-                context,
-                '/home_onlline-booking_details-go_to_pickup',
-              );
-            },
-            child: Container(
-              height: 80,
-              width: double.infinity,
-              color: Color(
-                0xFFFEBC52,
-              ),
-              child: Center(
-                child: Text(
-                  'go to pick up'.toUpperCase(),
-                  style: GoogleFonts.manrope(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
