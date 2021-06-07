@@ -42,11 +42,833 @@ class _HomeOnlineBookingDetailsGoToPickUpState
           0xFFFFFFFF,
         ),
       ),
-      body: SlidingUpPanel(
-        body: Image.asset('assets/maps.png',),
-        panelBuilder: (controller) => SwipeUp(
-          controller: controller,
-        ),
+      body: Stack(
+        children: [
+          Image.asset(
+            'assets/maps.png',
+            fit: BoxFit.fill,
+          ),
+          DraggableScrollableSheet(
+            initialChildSize: 0.12,
+            maxChildSize: 0.96,
+            minChildSize: 0.1,
+            builder: (context, controller) => ClipRRect(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey[900],
+                      blurRadius: 50,
+                      offset: Offset(
+                        -10,
+                        -10,
+                      ),
+                    ),
+                  ],
+                ),
+                child: ListView(
+                  controller: controller,
+                  children: [
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 185,
+                      ),
+                      child: Container(
+                        height: 4,
+                        width: 10,
+                        color: Colors.grey[500],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 15,
+                      ),
+                      width: width,
+                      height: height * 0.07,
+                      color: Colors.white,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 45,
+                            width: 45,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Color(
+                                0xFFFEBC52,
+                              ),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'A',
+                                style: GoogleFonts.manrope(
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                'Pick up at',
+                                style: GoogleFonts.manrope(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(
+                                    0xFFBEC2CE,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 2,
+                              ),
+                              Text(
+                                '7958 Swift Village',
+                                style: GoogleFonts.manrope(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(
+                                    0xFF242A37,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 15,
+                      ),
+                      child: Container(
+                        height: 1,
+                        width: width,
+                        color: Color(
+                          0xFF242A37,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(
+                        right: 25,
+                        left: 25,
+                      ),
+                      color: Colors.white,
+                      width: width,
+                      height: height * 0.16,
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 15,
+                              vertical: 10,
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  children: [
+                                    Text(
+                                      'Est',
+                                      style: GoogleFonts.manrope(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w400,
+                                        color: Color(
+                                          0xFFBEC2CE,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 2,
+                                    ),
+                                    Text(
+                                      '5 mins',
+                                      style: GoogleFonts.manrope(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: Color(
+                                          0xFF242A37,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Column(
+                                  children: [
+                                    Text(
+                                      'Distance',
+                                      style: GoogleFonts.manrope(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w400,
+                                        color: Color(
+                                          0xFFBEC2CE,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 2,
+                                    ),
+                                    Text(
+                                      '2.2 Km',
+                                      style: GoogleFonts.manrope(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: Color(
+                                          0xFF242A37,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Column(
+                                  children: [
+                                    Text(
+                                      'Fare',
+                                      style: GoogleFonts.manrope(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w400,
+                                        color: Color(
+                                          0xFFBEC2CE,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 2,
+                                    ),
+                                    Text(
+                                      '\$25.00',
+                                      style: GoogleFonts.manrope(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: Color(
+                                          0xFF242A37,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            height: 45,
+                            width: width,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              color: Color(
+                                0xFFFEBC52,
+                              ),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'DROP OFF',
+                                style: GoogleFonts.manrope(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(
+                                    0xFF262628,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 15,
+                      ),
+                      child: Container(
+                        height: 1,
+                        width: width,
+                        color: Color(
+                          0xFF242A37,
+                        ),
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 30,
+                            vertical: 5,
+                          ),
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                'assets/up_arrow.png',
+                                height: 17,
+                                width: 12,
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Text(
+                                'Head shouth west on Madison St',
+                                style: GoogleFonts.manrope(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(
+                                    0xFF242A37,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 30,
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 17,
+                                width: 12,
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Text(
+                                '',
+                                style: GoogleFonts.manrope(
+                                  fontSize: 13,
+                                  color: Color(
+                                    0xFFA3A6AF,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 30,
+                            top: 5,
+                          ),
+                          child: Container(
+                            width: width,
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 17,
+                                  width: 12,
+                                ),
+                                SizedBox(
+                                  width: 30,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      '18 miles',
+                                      style: GoogleFonts.manrope(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w400,
+                                        color: Color(
+                                          0xFF242A37,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Align(
+                                      alignment: Alignment.centerRight,
+                                      child: Container(
+                                        height: 1,
+                                        width: width * 0.65,
+                                        color: Color(
+                                          0xFF242A37,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 30,
+                            vertical: 5,
+                          ),
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                'assets/left_sub_arrow.png',
+                                height: 17,
+                                width: 12,
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Text(
+                                'Turn left unto 4th Ave',
+                                style: GoogleFonts.manrope(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(
+                                    0xFF242A37,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 30,
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 17,
+                                width: 12,
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Text(
+                                '',
+                                style: GoogleFonts.manrope(
+                                  fontSize: 13,
+                                  color: Color(
+                                    0xFFA3A6AF,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 30,
+                            top: 5,
+                          ),
+                          child: Container(
+                            width: width,
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 17,
+                                  width: 12,
+                                ),
+                                SizedBox(
+                                  width: 30,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      '12 miles',
+                                      style: GoogleFonts.manrope(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w400,
+                                        color: Color(
+                                          0xFF242A37,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Align(
+                                      alignment: Alignment.centerRight,
+                                      child: Container(
+                                        height: 1,
+                                        width: width * 0.65,
+                                        color: Color(
+                                          0xFF242A37,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 30,
+                            vertical: 5,
+                          ),
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                'assets/right_sub_arrow.png',
+                                height: 17,
+                                width: 12,
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Text(
+                                'Turn right at 105th N Link Rd',
+                                style: GoogleFonts.manrope(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(
+                                    0xFF242A37,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 30,
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 17,
+                                width: 12,
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Text(
+                                'Pass by Executive Hotel Pacific (on the left)',
+                                style: GoogleFonts.manrope(
+                                  fontSize: 13,
+                                  color: Color(
+                                    0xFFA3A6AF,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 30,
+                            top: 5,
+                          ),
+                          child: Container(
+                            width: width,
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 17,
+                                  width: 12,
+                                ),
+                                SizedBox(
+                                  width: 30,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      '40 miles',
+                                      style: GoogleFonts.manrope(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w400,
+                                        color: Color(
+                                          0xFF242A37,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Align(
+                                      alignment: Alignment.centerRight,
+                                      child: Container(
+                                        height: 1,
+                                        width: width * 0.65,
+                                        color: Color(
+                                          0xFF242A37,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 30,
+                            vertical: 5,
+                          ),
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                'assets/right_sub_arrow.png',
+                                height: 17,
+                                width: 12,
+                                color: Color(
+                                  0xFFFEBC52,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Flexible(
+                                child: Text(
+                                  'Turn right at 105 William St, Chicago, US',
+                                  style: GoogleFonts.manrope(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(
+                                      0xFFFEBC52,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 30,
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 17,
+                                width: 12,
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Text(
+                                '',
+                                style: GoogleFonts.manrope(
+                                  fontSize: 13,
+                                  color: Color(
+                                    0xFFA3A6AF,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 30,
+                            top: 5,
+                          ),
+                          child: Container(
+                            width: width,
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 17,
+                                  width: 12,
+                                ),
+                                SizedBox(
+                                  width: 30,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      '250 miles',
+                                      style: GoogleFonts.manrope(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w400,
+                                        color: Color(
+                                          0xFF242A37,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Align(
+                                      alignment: Alignment.centerRight,
+                                      child: Container(
+                                        height: 1,
+                                        width: width * 0.65,
+                                        color: Color(
+                                          0xFF242A37,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 30,
+                            vertical: 5,
+                          ),
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                'assets/up_arrow.png',
+                                height: 17,
+                                width: 12,
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Flexible(
+                                child: Text(
+                                  'Continue straight to stay on Vancouver',
+                                  style: GoogleFonts.manrope(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(
+                                      0xFF242A37,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 30,
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 17,
+                                width: 12,
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Text(
+                                'Entering California',
+                                style: GoogleFonts.manrope(
+                                  fontSize: 13,
+                                  color: Color(
+                                    0xFFA3A6AF,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 30,
+                            top: 5,
+                          ),
+                          child: Container(
+                            width: width,
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 17,
+                                  width: 12,
+                                ),
+                                SizedBox(
+                                  width: 30,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      '24 miles',
+                                      style: GoogleFonts.manrope(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w400,
+                                        color: Color(
+                                          0xFF242A37,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Align(
+                                      alignment: Alignment.centerRight,
+                                      child: Container(
+                                        height: 1,
+                                        width: width * 0.65,
+                                        color: Color(
+                                          0xFF242A37,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
