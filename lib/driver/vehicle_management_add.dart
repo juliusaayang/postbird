@@ -77,13 +77,29 @@ class _VehicleManagementAddState extends State<VehicleManagementAdd> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        'Toyota',
-                        style: GoogleFonts.manrope(
-                          fontSize: 17,
-                          fontWeight: FontWeight.w500,
-                          color: Color(
-                            0xFF242A37,
+                      Container(
+                        height: 40,
+                        width: MediaQuery.of(context).size.width / 1.4,
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            bottom: 7,
+                          ),
+                          child: TextField(
+                            textCapitalization: TextCapitalization.words,
+                            keyboardType: TextInputType.name,
+                            cursorColor: Color(
+                              0xFFFEBC52,
+                            ),
+                            style: GoogleFonts.manrope(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w500,
+                              color: Color(
+                                0xFF242A37,
+                              ),
+                            ),
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                            ),
                           ),
                         ),
                       ),
@@ -137,13 +153,29 @@ class _VehicleManagementAddState extends State<VehicleManagementAdd> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        'Camry',
-                        style: GoogleFonts.manrope(
-                          fontSize: 17,
-                          fontWeight: FontWeight.w500,
-                          color: Color(
-                            0xFF242A37,
+                      Container(
+                        height: 40,
+                        width: MediaQuery.of(context).size.width / 1.4,
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            bottom: 7,
+                          ),
+                          child: TextField(
+                            textCapitalization: TextCapitalization.words,
+                            keyboardType: TextInputType.name,
+                            cursorColor: Color(
+                              0xFFFEBC52,
+                            ),
+                            style: GoogleFonts.manrope(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w500,
+                              color: Color(
+                                0xFF242A37,
+                              ),
+                            ),
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                            ),
                           ),
                         ),
                       ),
@@ -197,13 +229,29 @@ class _VehicleManagementAddState extends State<VehicleManagementAdd> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        '2018',
-                        style: GoogleFonts.manrope(
-                          fontSize: 17,
-                          fontWeight: FontWeight.w500,
-                          color: Color(
-                            0xFF242A37,
+                      Container(
+                        height: 40,
+                        width: MediaQuery.of(context).size.width / 1.4,
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            bottom: 7,
+                          ),
+                          child: TextField(
+                            textCapitalization: TextCapitalization.words,
+                            keyboardType: TextInputType.number,
+                            cursorColor: Color(
+                              0xFFFEBC52,
+                            ),
+                            style: GoogleFonts.manrope(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w500,
+                              color: Color(
+                                0xFF242A37,
+                              ),
+                            ),
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                            ),
                           ),
                         ),
                       ),
@@ -257,13 +305,29 @@ class _VehicleManagementAddState extends State<VehicleManagementAdd> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        '43A 364.82',
-                        style: GoogleFonts.manrope(
-                          fontSize: 17,
-                          fontWeight: FontWeight.w500,
-                          color: Color(
-                            0xFF242A37,
+                      Container(
+                        height: 40,
+                        width: MediaQuery.of(context).size.width / 1.4,
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            bottom: 7,
+                          ),
+                          child: TextField(
+                            textCapitalization: TextCapitalization.words,
+                            keyboardType: TextInputType.number,
+                            cursorColor: Color(
+                              0xFFFEBC52,
+                            ),
+                            style: GoogleFonts.manrope(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w500,
+                              color: Color(
+                                0xFF242A37,
+                              ),
+                            ),
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                            ),
                           ),
                         ),
                       ),
@@ -317,13 +381,29 @@ class _VehicleManagementAddState extends State<VehicleManagementAdd> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        'Black',
-                        style: GoogleFonts.manrope(
-                          fontSize: 17,
-                          fontWeight: FontWeight.w500,
-                          color: Color(
-                            0xFF242A37,
+                      Container(
+                        height: 40,
+                        width: MediaQuery.of(context).size.width / 1.4,
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            bottom: 7,
+                          ),
+                          child: TextField(
+                            textCapitalization: TextCapitalization.words,
+                            keyboardType: TextInputType.name,
+                            cursorColor: Color(
+                              0xFFFEBC52,
+                            ),
+                            style: GoogleFonts.manrope(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w500,
+                              color: Color(
+                                0xFF242A37,
+                              ),
+                            ),
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                            ),
                           ),
                         ),
                       ),
@@ -377,13 +457,29 @@ class _VehicleManagementAddState extends State<VehicleManagementAdd> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        'Taxi 7 Seat',
-                        style: GoogleFonts.manrope(
-                          fontSize: 17,
-                          fontWeight: FontWeight.w500,
-                          color: Color(
-                            0xFF242A37,
+                      Container(
+                        height: 40,
+                        width: MediaQuery.of(context).size.width / 1.4,
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            bottom: 7,
+                          ),
+                          child: TextField(
+                            textCapitalization: TextCapitalization.words,
+                            keyboardType: TextInputType.name,
+                            cursorColor: Color(
+                              0xFFFEBC52,
+                            ),
+                            style: GoogleFonts.manrope(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w500,
+                              color: Color(
+                                0xFF242A37,
+                              ),
+                            ),
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                            ),
                           ),
                         ),
                       ),

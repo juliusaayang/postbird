@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:postbird/driver/My%20Account.dart';
 import 'package:postbird/driver/history.dart';
 import 'package:postbird/driver/home_oneline-booking_details-go_to_pickup.dart';
 import 'package:postbird/driver/home_online-boooking_details.dart';
@@ -31,6 +32,7 @@ import 'package:postbird/screens/register/create_account_2.dart';
 import 'package:postbird/screens/register/create_account_3.dart';
 import 'package:postbird/screens/register/sign_up.dart';
 
+import 'driver/Account Edit.dart';
 import 'driver/history_details.dart';
 
 void main() {
@@ -41,7 +43,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Login(),
+      home: MyAccount(),
       routes: {
         '/create_account': (context) => CreateAccount(),
         '/create_account_2': (context) => CreateAccount2(),
